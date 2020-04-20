@@ -62,6 +62,7 @@
             <field name="name">Report One : Employee name with subject and marks.</field>
             <field name="res_model">kw_report_one</field>
             <field name="view_mode">tree</field>
+            <field name="target">new</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     No Report
@@ -76,6 +77,7 @@
             <field name="name">Report Two : College name with student count.</field>
             <field name="res_model">kw_report_two</field>
             <field name="view_mode">tree</field>
+            <field name="target">new</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     No Report
@@ -90,6 +92,7 @@
             <field name="name">Report Three : Student count with marks more than 90.</field>
             <field name="res_model">kw_report_three</field>
             <field name="view_mode">tree</field>
+            <field name="target">new</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     No Report
@@ -104,6 +107,7 @@
             <field name="name">Report Four : Subject wise average marks.</field>
             <field name="res_model">kw_report_four</field>
             <field name="view_mode">tree</field>
+            <field name="target">new</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     No Report
