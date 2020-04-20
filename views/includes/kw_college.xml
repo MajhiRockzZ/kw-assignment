@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="college_view_tree" model="ir.ui.view">
+      <field name="name">College</field>
+      <field name="model">kw_college</field>
+      <field name="arch" type="xml">
+        <tree string="College">
+          <field name="college_name"/>
+          <field name="college_stream"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="college_view_form" model="ir.ui.view">
+      <field name="name">College</field>
+      <field name="model">kw_college</field>
+      <field name="arch" type="xml">
+        <form string="College">
+          <sheet>
+            <group>
+              <field name="college_name"/>
+              <field name="college_stream"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</odoo>

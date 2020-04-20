@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="semester_view_tree" model="ir.ui.view">
+      <field name="name">Semester</field>
+      <field name="model">kw_semester</field>
+      <field name="arch" type="xml">
+        <tree string="Semester">
+          <field name="semester_name"/>
+          <field name="semester_subject"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="semester_view_form" model="ir.ui.view">
+      <field name="name">Semester</field>
+      <field name="model">kw_semester</field>
+      <field name="arch" type="xml">
+        <form string="Semester">
+          <sheet>
+            <group>
+              <field name="semester_name"/>
+              <field name="semester_subject"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</odoo>

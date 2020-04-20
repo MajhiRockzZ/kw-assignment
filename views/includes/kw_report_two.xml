@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <record id="report_two_view_tree" model="ir.ui.view">
+           <field name="name">Report Two</field>
+           <field name="model">kw_report_two</field>
+           <field name="arch" type="xml">
+               <tree create="false" edit="false" string="report_two_tree">
+                   <field name="college_name"/>
+                   <field name="student_count"/>
+               </tree>
+           </field>
+       </record>
+
+    </data>
+</odoo>

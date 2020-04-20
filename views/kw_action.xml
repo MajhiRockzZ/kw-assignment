@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="college_action_form" model="ir.actions.act_window">
+            <field name="name">College</field>
+            <field name="res_model">kw_college</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Record
+                </p>
+                <p>
+                    Add new college details.
+                </p>
+            </field>
+        </record>
+
+        <record id="stream_action_form" model="ir.actions.act_window">
+            <field name="name">Stream</field>
+            <field name="res_model">kw_stream</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Record
+                </p>
+                <p>
+                    Add new stream details.
+                </p>
+            </field>
+        </record>
+
+        <record id="semester_action_form" model="ir.actions.act_window">
+            <field name="name">Semester</field>
+            <field name="res_model">kw_semester</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Record
+                </p>
+                <p>
+                    Add new semester details.
+                </p>
+            </field>
+        </record>
+
+        <record id="subject_action_form" model="ir.actions.act_window">
+            <field name="name">Subject</field>
+            <field name="res_model">kw_subject</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Record
+                </p>
+                <p>
+                    Add new subject details.
+                </p>
+            </field>
+        </record>
+
+        <record id="report_one_action_form" model="ir.actions.act_window">
+            <field name="name">Report One : Employee name with subject and marks.</field>
+            <field name="res_model">kw_report_one</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Report
+                </p>
+                <p>
+                    Add new report details.
+                </p>
+            </field>
+        </record>
+
+        <record id="report_two_action_form" model="ir.actions.act_window">
+            <field name="name">Report Two : College name with student count.</field>
+            <field name="res_model">kw_report_two</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Report
+                </p>
+                <p>
+                    Add new report details.
+                </p>
+            </field>
+        </record>
+
+        <record id="report_three_action_form" model="ir.actions.act_window">
+            <field name="name">Report Three : Student count with marks more than 90.</field>
+            <field name="res_model">kw_report_three</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Report
+                </p>
+                <p>
+                    Add new report details.
+                </p>
+            </field>
+        </record>
+
+        <record id="report_four_action_form" model="ir.actions.act_window">
+            <field name="name">Report Four : Subject wise average marks.</field>
+            <field name="res_model">kw_report_four</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No Report
+                </p>
+                <p>
+                    Add new report details.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

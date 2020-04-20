@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ROOT MENU ITEMS-->
+        <menuitem id="menu_assignment" name="Assignment"/>
+
+        <!-- COLLEGE DETAILS MENU ITEMS-->
+        <menuitem id="menu_college" name="College" parent="menu_assignment" action="college_action_form"/>
+        <menuitem id="menu_stream" name="Stream" parent="menu_assignment" action="stream_action_form"/>
+        <menuitem id="menu_semester" name="Semester" parent="menu_assignment" action="semester_action_form"/>
+        <menuitem id="menu_subject" name="Subject" parent="menu_assignment" action="subject_action_form"/>
+
+        <!-- REPORT MENU ITEMS-->
+        <menuitem id="menu_report" name="Report" parent="menu_assignment"/>
+        <menuitem id="menu_report_one" name="Report 1" parent="menu_report" action="report_one_action_form"/>
+        <menuitem id="menu_report_two" name="Report 2" parent="menu_report" action="report_two_action_form"/>
+        <menuitem id="menu_report_three" name="Report 3" parent="menu_report" action="report_three_action_form"/>
+        <menuitem id="menu_report_four" name="Report 4" parent="menu_report" action="report_four_action_form"/>
+    </data>
+</odoo>

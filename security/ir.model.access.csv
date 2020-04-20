@@ -1,0 +1,18 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+college_hr, College hr access,model_kw_college,kw_assignment.group_hr,1,1,1,1
+stream_hr, Stream hr access,model_kw_stream,kw_assignment.group_hr,1,1,1,1
+semester_hr, Semester hr access,model_kw_semester,kw_assignment.group_hr,1,1,1,1
+subject_hr, Subject hr access,model_kw_subject,kw_assignment.group_hr,1,1,1,1
+report_one_hr, Report One hr access,model_kw_report_one,kw_assignment.group_hr,1,1,1,1
+report_two_hr, Report Two hr access,model_kw_report_two,kw_assignment.group_hr,1,1,1,1
+report_three_hr, Report Three hr access,model_kw_report_three,kw_assignment.group_hr,1,1,1,1
+report_four_hr, Report Four hr access,model_kw_report_four,kw_assignment.group_hr,1,1,1,1
+
+college_user, College user access,model_kw_college,kw_assignment.group_user,1,0,0,0
+stream_user, Stream user access,model_kw_stream,kw_assignment.group_user,1,0,0,0
+semester_user, Semester user access,model_kw_semester,kw_assignment.group_user,1,0,0,0
+subject_user, Subject user access,model_kw_subject,kw_assignment.group_user,1,0,0,0
+report_one_user, Report One user access,model_kw_report_one,kw_assignment.group_user,1,0,0,0
+report_two_user, Report Two user access,model_kw_report_two,kw_assignment.group_user,1,0,0,0
+report_three_user, Report Three user access,model_kw_report_three,kw_assignment.group_user,1,0,0,0
+report_four_user, Report Four user access,model_kw_report_four,kw_assignment.group_user,1,0,0,0
