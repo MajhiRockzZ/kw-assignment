@@ -20,7 +20,7 @@
                 <xpath expr="//page[@name='hr_settings']" position="after">
                     <page name="public" string="Education Details">
                         <group string="Acedimic details">
-                            <field name="emp_college_id"/>
+                            <field name="emp_college_id" attrs="{'readonly': [('emp_status','=','Approved')]}"/>
                         </group>
                     </page>
                 </xpath>
