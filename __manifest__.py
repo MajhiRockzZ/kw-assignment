@@ -22,6 +22,7 @@
         'views/includes/kw_report_two.xml',
         'views/includes/kw_report_three.xml',
         'views/includes/kw_report_four.xml',
+        'views/website/report_webpage.xml',
         'views/kw_action.xml',
         'views/kw_menuitem.xml'
     ],
