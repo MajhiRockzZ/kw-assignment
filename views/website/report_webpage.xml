@@ -34,13 +34,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-foreach="subjects" t-as="subject">
+                                <t t-foreach="subject_list" t-as="subject_data">
                                     <tr>
                                         <td>
-                                            <span t-esc="subject.subject_name"/>
+                                            <span t-esc="subject_data['subject']"/>
                                         </td>
                                         <td>
-                                            <span t-esc="subject.subject_mark"/>
+                                            <span t-esc="subject_data['average']"/>
                                         </td>
                                     </tr>
                                 </t>

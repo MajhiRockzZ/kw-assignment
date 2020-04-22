@@ -9,7 +9,30 @@ class ReportController(http.Controller):
 
     @http.route('/report/one', type='http', auth='public', website=True)
     def render_report_one_page(self):
+        subject_wise_avg = dict()
+        subject_wise_avg['subject_list'] = []
+        main_list = []
+
         subjects = http.request.env['kw_subject'].sudo().search([])
-        return http.request.render('kw_assignment.report_one_page', {
-            'subjects': subjects
-        })
+
+        for subject in subjects:
+            if subject.subject_name not in main_list:
+                main_list.append(subject.subject_name)
+
+        for subject in main_list:
+            unique_subjects = http.request.env['kw_subject'].sudo().search(
+                [('subject_name', '=', subject)])
+            subject_number = len(unique_subjects)
+            total_marks = 0
+
+            for data in unique_subjects:
+                total_marks = total_marks + data.subject_mark
+
+            subject_avg = total_marks / subject_number
+
+            # subject_wise_avg[f"{subject}"] = subject_avg
+            subject_wise_avg['subject_list'].append(
+                {'subject': subject, 'average': subject_avg})
+        print(subject_wise_avg)
+
+        return http.request.render('kw_assignment.report_one_page', subject_wise_avg)
