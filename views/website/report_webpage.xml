@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- MAIN REPORT PAGE TEMPLATE -->
         <template id="report_page" name="Report page">
             <t t-call="website.layout">
                 <div class="oe_structure">
@@ -10,8 +11,41 @@
                         </center>
                         <p>
                 Subject wise average mark. 
-                            <a t-attf-href="/example/one" class="btn btn-info">View report</a>
+                            <a t-attf-href="/report/one" class="btn btn-info">View report</a>
                         </p>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <!-- SUBJECT/AVG MARK REPORT TEMPLATE -->
+        <template id="report_one_page" name="Report one page">
+            <t t-call="website.layout">
+                <div class="oe_structure">
+                    <div class="container">
+                        <center>
+                            <h3>Subject wise average marks</h3>
+                        </center>
+                        <table class="table table-bordered">
+                            <thead class="bg-primary">
+                                <tr>
+                                    <td scope="col">Subject</td>
+                                    <td scope="col">Marks</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="subjects" t-as="subject">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="subject.subject_name"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="subject.subject_mark"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </t>
