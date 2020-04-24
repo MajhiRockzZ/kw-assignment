@@ -9,6 +9,8 @@ class ReportController(http.Controller):
 
     @http.route('/report/one', type='http', auth='public', website=True)
     def render_report_one_page(self):
+
+        # ==== [ SUBJECT WISE AVERAGE MARK ] ====
         subject_wise_avg = dict()
         subject_wise_avg['subject_list'] = []
         main_list = []
@@ -30,9 +32,36 @@ class ReportController(http.Controller):
 
             subject_avg = total_marks / subject_number
 
-            # subject_wise_avg[f"{subject}"] = subject_avg
             subject_wise_avg['subject_list'].append(
                 {'subject': subject, 'average': subject_avg})
-        print(subject_wise_avg)
 
         return http.request.render('kw_assignment.report_one_page', subject_wise_avg)
+
+    @http.route('/report/two', type='http', auth='public', website=True)
+    def render_report_two_page(self):
+
+        # ==== [ SUBJECT WISE HIGHEST MARK ] ====
+        subjects = http.request.env['kw_subject'].sudo().search([])
+
+        unique_subject_list = []
+
+        subject_max_mark = {}
+        subject_max_mark['subject_list'] = []
+
+        for subject in subjects:
+            if subject.subject_name not in unique_subject_list:
+                unique_subject_list.append(subject.subject_name)
+
+        for subject_name in unique_subject_list:
+            subject_data = http.request.env['kw_subject'].sudo().search([('subject_name', '=', subject_name)])
+            max_mark = 0
+            for data in subject_data:
+                if data.subject_mark > max_mark:
+                    max_mark = data.subject_mark
+            subject_max_mark['subject_list'].append({
+                'subject_name': subject_name,
+                'max_mark': max_mark
+            })
+
+        return http.request.render('kw_assignment.report_two_page', subject_max_mark)
+

@@ -12,10 +12,10 @@ class KwSubject(models.Model):
     subject_mark = fields.Integer(string="Marks Obtained")
     subject_semester_id = fields.Many2one('kw_semester', string="Subject ID")
 
-    _sql_constraints = [
-        ("subject_name_unique", "unique(subject_name)",
-         "The subject name should be unique.")
-    ]
+    # _sql_constraints = [
+    #     ("subject_name_unique", "unique(subject_name)",
+    #      "The subject name should be unique.")
+    # ]
 
     @api.constrains('subject_mark')
     def validate_subject_mark(self):
