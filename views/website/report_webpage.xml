@@ -9,12 +9,37 @@
                         <center>
                             <h3>Report</h3>
                         </center>
-                        <p>Subject wise average mark. 
-                            <a t-attf-href="/report/one" class="btn btn-info">View report</a>
-                        </p>
-                        <p>Subject wise highest mark. 
-                            <a t-attf-href="/report/two" class="btn btn-info">View report</a>
-                        </p>
+
+                        <table class="table table-bordered">
+                            <thead class="bg-primary">
+                                <tr>
+                                    <td scope="col">Output</td>
+                                    <td scope="col"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Subject wise average mark.</p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <a t-attf-href="/report/one" class="btn btn-info">View report</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Employee name and subject wise highest mark.</p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <a t-attf-href="/report/two" class="btn btn-info">View report</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </t>
@@ -64,6 +89,7 @@
                         <table class="table table-bordered">
                             <thead class="bg-primary">
                                 <tr>
+                                    <td scope="col">Employee Name</td>
                                     <td scope="col">Subject Name</td>
                                     <td scope="col">Maximum Marks</td>
                                 </tr>
@@ -71,6 +97,9 @@
                             <tbody>
                                 <t t-foreach="subject_list" t-as="subject_data">
                                     <tr>
+                                        <td>
+                                            <span t-esc="subject_data['employee_name']"/>
+                                        </td>
                                         <td>
                                             <span t-esc="subject_data['subject_name']"/>
                                         </td>
