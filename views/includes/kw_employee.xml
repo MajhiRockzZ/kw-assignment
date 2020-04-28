@@ -21,6 +21,9 @@
                     <page name="public" string="Education Details">
                         <group string="Acedimic details">
                             <field name="emp_college_id" attrs="{'readonly': [('emp_status','=','Approved')]}"/>
+                            <field name="emp_stream_id" attrs="{'readonly': [('emp_status','=','Approved')]}"/>
+                            <field name="emp_semester_id" attrs="{'readonly': [('emp_status','=','Approved')]}"/>
+                            <field name="emp_subject_id" attrs="{'readonly': [('emp_status','=','Approved')]}"/>
                         </group>
                     </page>
                 </xpath>
@@ -28,10 +31,8 @@
                 <!-- REJECT AND APPROVE BUTTONS-->
                 <xpath expr="//form">
                     <header>
-                        <button string="Approve" type="object" class="btn-success btn-lg" name="employee_approve"
-                                groups="kw_assignment.group_hr"></button>
-                        <button string="Reject" type="object" class="btn-danger btn-lg" name="employee_reject"
-                                groups="kw_assignment.group_hr"></button>
+                        <button string="Approve" type="object" class="btn-success btn-lg" name="employee_approve" groups="kw_assignment.group_hr"></button>
+                        <button string="Reject" type="object" class="btn-danger btn-lg" name="employee_reject" groups="kw_assignment.group_hr"></button>
                     </header>
                 </xpath>
 

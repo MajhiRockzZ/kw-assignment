@@ -40,7 +40,7 @@ class ReportController(http.Controller):
     @http.route('/report/two', type='http', auth='public', website=True)
     def render_report_two_page(self):
 
-        # ==== [ SUBJECT WISE HIGHEST MARK ] ====
+        # ==== [ EMPLOYEE NAME AND SUBJECT WISE HIGHEST MARK ] ====
         subjects = http.request.env['kw_subject'].sudo().search([])
         employees = http.request.env['hr.employee'].sudo().search([])
 
